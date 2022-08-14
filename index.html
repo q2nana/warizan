@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>計算ゲーム〜割り算〜</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <audio>
+    <source src="./クイズ正解1.mp3" type="audio/mp3">
+  </audio>
+
+
+  <audio scr="クイズ正解1.mp3"></audio>
+
+  <div class="title">＼計算ゲーム／<p class="mode">〜割り算モード〜</p></div>
+  
+
+  <div class="bigbox">
+    <div class="leftbox" id="leftbox"></div>
+    <div class="symbolbox" id="symbolbox"></div>
+    <div class="rightbox" id="rightbox"></div>
+    <div class="equalbox" id="equalbox"></div>
+    <input  class="inputbox" id="answerinput" ></input>
+  </div>
+
+  <div class="answerbox" id="answerbox"> </div>
+
+  <div class="btn">
+    <button class="randombtn" id="randombtn">Start</button>
+    <div class="kara"></div>
+    <button class="subbtn" id="tenbtn">10問</button>
+    <button class="subbtn" id="twentybtn">20問</button>
+    <button class="subbtn" id="thirtybtn">30問</button>
+  </div>
+  
+  <div class="count">
+    <p  id="countp"></p>
+  </div>
+
+
+  <div class="moudamebox">
+    <p class="moudame" id="moudame">もうだめ</p>
+  </div>
+
+
+  <div id="timetimer2">
+  <div id="timetimer">00:00.000</div>
+  </div>
+
+  <div class="yamerubtn" id="yamerubtn"></div>
+  <a href="https://q2nana.github.io/keisangame/" class="topbtn" id="topbtn">トップへ</a>
+  <!-- <a href="file:///Users/yokoinanako/Desktop/%E8%A8%88%E7%AE%97%E3%82%B2%E3%83%BC%E3%83%A0/%E8%A8%88%E7%AE%97%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB/%E8%A1%A8%E7%B4%99/index.html" class="topbtn" id="topbtn">トップへ</a> -->
+
+  
+  <div class="mask" id="mask"></div>
+  <div class="mordal" id="mordal">
+    <div>結果</div>
+    <div id="resultminutes">○○点</div>
+  </div>
+  <div id="btncontain">
+    <button class="btn2" id="btnnext">もう一度</button>
+    <button class="btn2" id="btnstop">やめる</button>
+  </div>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

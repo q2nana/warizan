@@ -1,0 +1,444 @@
+header {
+  text-align: center;
+  margin-top: 100px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(255, 243, 169);
+  position: relative;
+}
+
+.title {
+  /* outline: 1px solid blue; */
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  line-height: 50px;
+  font-size: 50px;
+
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mode {
+  margin: 0;
+  font-size: 20px;
+}
+
+.bigbox{
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+
+  position: absolute;
+  top: 500px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 10px;
+  /* flex-wrap: wrap; */
+}
+
+.leftbox,.rightbox,.symbolbox,.equalbox,.inputbox{
+  outline: 1px solid black;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1 / 1;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 50px;;
+}
+
+.answerbox {
+  /* outline: 1px solid green; */
+  height: 70px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 70px;
+
+  position: absolute;
+  top: 750px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.inputbox {
+  border: none;
+}
+
+/* もうだめ */
+
+.moudamebox {
+  position: absolute;
+  top: 850px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.moudame {
+  background-color: white;
+  text-align: center;
+  display: none;
+  padding: 10px;
+  border-radius: 2px;
+
+  width: 60px;
+  height: 20px;
+  padding: 10px;
+  line-height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn {
+  /* outline: solid 1px rgb(162, 162, 162); */
+  /* width: 650px; */
+  height: 150px;
+  text-align: center;
+  line-height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+  position: absolute;
+  top: 820px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.yamerubtn {
+  position: absolute;
+  top:1250px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+
+  width: 60px;
+  height: 20px;
+  padding: 5px;
+  line-height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 13px;
+  cursor: pointer;
+
+  display: none;
+}
+
+.yamerubtn.display {
+  display: block;
+}
+
+.topbtn {
+  position: absolute;
+  top:1250px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+
+  width: 60px;
+  height: 20px;
+  padding: 5px;
+  line-height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.topbtn.hidden {
+  display: none;
+}
+
+.kara { 
+  width: 100%;
+}
+
+.randombtn {
+  /* outline: solid 1px paleturquoise; */
+  background-color: rgb(255, 192, 55);
+  border: 1px solid black;
+  border-radius: 4px;
+
+  flex-basis: 320px;
+  padding: 15px 5px 15px 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.subbtn {
+  width: 100px;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subbtn.push {
+  background-color: rgb(220, 208, 182);
+}
+
+.subbtn.hidden {
+  display: none;
+}
+
+
+
+/* カウント */
+.count {
+  position: absolute;
+  top:870px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* タイマー */
+#timetimer2 {
+  position: absolute;
+  top:1100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/* やめるボタン */
+.yamerubtn {
+  position: absolute;
+  top:1250px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+
+  width: 60px;
+  height: 20px;
+  padding: 5px;
+  line-height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 13px;
+  cursor: pointer;
+
+  display: none;
+}
+
+.yamerubtn.display {
+  display: block;
+}
+
+ /* モーダルウィンドウ */
+
+ #mask {
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+
+#mordal {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  transition: transform 0.4s;
+  transform: translate(0,-800px);
+}
+
+#btncontain {
+  /* outline: 1px solid red; */
+  width: 230px;
+  padding: 20px;
+  border-radius: 4px;
+
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.4s;
+  transform: translate(0,-700px);
+}
+
+.btn2 {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+  width: 100px;
+ cursor: pointer;
+}
+
+#mask.display{
+  display: block;
+}
+
+#mordal.display {
+  transform: translate(0,0px);
+}
+
+#btncontain.display {
+  transform: translate(0,0px);
+}
+
+
+#randombtn.hidden {
+  display: none;
+}
+
+#moudame.display {
+  display: inline;
+}
+
+/*--------------- 真ん中のピンク -----------------*/
+
+@media (min-width: 550px) and (max-width: 800px) {
+  body {
+    background: rgb(251, 205, 212);
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .leftbox,.rightbox,.symbolbox,.equalbox,.inputbox{
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 40px;;
+  }
+
+  .answerbox {
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .randombtn {
+    /* outline: solid 1px paleturquoise; */
+    flex-basis: 240px;
+    height: 70px;
+    padding: 15px 5px;
+    font-size: 25px;
+    border-radius: 4px;
+    border: 0.5px solid black;
+    background-color: rgb(230, 102, 124);
+    color: rgb(243, 243, 243);
+  }
+
+  .subbtn {
+    width: 75px;
+    height: 35px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .subbtn.push{
+    background: rgb(229, 211, 214);
+  }
+
+}
+
+
+/* --------------------小さい水色---------------------- */
+
+@media (min-width: 0px) and (max-width: 550px) {
+  body {
+    background: rgb(185, 219, 233);
+  }
+
+  .title {
+    font-size: 25px;
+  }
+  
+
+  .leftbox,.rightbox,.symbolbox,.equalbox,.inputbox{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 25px;;
+  }
+
+  .answerbox {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .randombtn {
+    /* outline: solid 1px paleturquoise; */
+    background-color: rgb(81, 198, 240);
+    flex-basis: 170px;
+    height: 60px;
+    line-height: 18px;
+    font-size: 18px;
+  }
+
+  .subbtn {
+    width: 50px;
+    height: 30px;
+    margin-top: -30px;
+  }
+
+  .subbtn.push {
+    background-color: rgb(195, 206, 210);
+  }
+
+
+}
+

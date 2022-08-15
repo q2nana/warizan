@@ -1,3 +1,4 @@
+
 header {
   text-align: center;
   margin-top: 100px;
@@ -13,6 +14,16 @@ body {
   position: relative;
 }
 
+body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+ 
+html {
+  height: -webkit-fill-available;
+}
+
 .title {
   /* outline: 1px solid blue; */
   text-align: center;
@@ -26,6 +37,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+
 }
 
 .mode {
@@ -41,11 +53,11 @@ body {
   height: 200px;
 
   position: absolute;
-  top: 500px;
+  top: 150px;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
+  margin: 0;
   padding: 10px;
   /* flex-wrap: wrap; */
 }
@@ -70,7 +82,7 @@ body {
   line-height: 70px;
 
   position: absolute;
-  top: 750px;
+  top: 120px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -123,62 +135,11 @@ body {
 
 
   position: absolute;
-  top: 820px;
+  top: 200px;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-}
-
-.yamerubtn {
-  position: absolute;
-  top:1250px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-
-  width: 60px;
-  height: 20px;
-  padding: 5px;
-  line-height: 20px;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid black;
-  font-size: 13px;
-  cursor: pointer;
-
-  display: none;
-}
-
-.yamerubtn.display {
-  display: block;
-}
-
-.topbtn {
-  position: absolute;
-  top:1250px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-
-  width: 60px;
-  height: 20px;
-  padding: 5px;
-  line-height: 20px;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid black;
-  font-size: 13px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.topbtn.hidden {
-  display: none;
 }
 
 .kara { 
@@ -220,7 +181,7 @@ body {
 /* カウント */
 .count {
   position: absolute;
-  top:870px;
+  top:430px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -232,7 +193,7 @@ body {
 /* タイマー */
 #timetimer2 {
   position: absolute;
-  top:1100px;
+  top:550px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -243,9 +204,9 @@ body {
 /* やめるボタン */
 .yamerubtn {
   position: absolute;
-  top:1250px;
+  top:600px;
   right: 0;
-  bottom: 0;
+  bottom: 50px;
   left: 0;
   margin: auto;
   text-align: center;
@@ -265,6 +226,31 @@ body {
 
 .yamerubtn.display {
   display: block;
+}
+
+.topbtn {
+  position: absolute;
+  top:600px;
+  right: 0;
+  bottom: 50px;
+  left: 0;
+  margin: auto;
+  text-align: center;
+
+  width: 60px;
+  height: 20px;
+  padding: 5px;
+  line-height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.topbtn.hidden{
+  display: none;
 }
 
  /* モーダルウィンドウ */
@@ -399,25 +385,69 @@ body {
 /* --------------------小さい水色---------------------- */
 
 @media (min-width: 0px) and (max-width: 550px) {
+
+
+
   body {
     background: rgb(185, 219, 233);
   }
 
   .title {
     font-size: 25px;
+    /* outline: 1px solid red; */
+  }
+
+  .bigbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* outline: 1px solid red; */
+    position: absolute;
+    top: 150px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0px;
   }
   
 
   .leftbox,.rightbox,.symbolbox,.equalbox,.inputbox{
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 25px;;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
   }
 
   .answerbox {
+    position: absolute;
+    top: 280px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
     text-align: center;
     font-size: 25px;
+  }
+
+  .btn {
+    /* outline: solid 1px rgb(162, 162, 162); */
+    /* width: 650px; */
+    height: 150px;
+    text-align: center;
+    line-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  
+    position: absolute;
+    top: 280px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
   }
 
   .randombtn {
@@ -439,6 +469,47 @@ body {
     background-color: rgb(195, 206, 210);
   }
 
+  .yamerubtn {
+    position: absolute;
+    top:350px;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  .topbtn {
+    position: absolute;
+    top:350px;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  #timetimer2 {
+    position: absolute;
+    top:420px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  .count {
+    position: absolute;
+    top:330px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+  }
 
 }
+
 

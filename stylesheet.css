@@ -594,6 +594,10 @@ p {
     text-align: center;
   }
 
+  td:active {
+    background-color: #ccc;
+  }
+
   .numdate.display {
     display: block;
   }
